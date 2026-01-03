@@ -15,11 +15,12 @@ The checkpoint is close to chinchilla optimal (currently at ~24x), leaving some 
 
 otherwise, step by step:
 
+
+## 1. Prepare Data
+
 ```bash
 pip install -r requirements.txt
 ```
-
-## 1. Prepare Data
 
 Download pre-tokenized dataset (~20GB):
 ```bash
