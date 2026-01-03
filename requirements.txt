@@ -1,0 +1,11 @@
+# Core training dependencies
+torch>=2.4.0
+tiktoken>=0.7.0
+
+# HuggingFace ecosystem (data loading)
+datasets>=2.14.0
+huggingface_hub>=0.20.0
+
+# Evaluation & progress bars
+tqdm>=4.65.0
+
