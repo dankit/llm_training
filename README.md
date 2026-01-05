@@ -1,10 +1,10 @@
 # Language Model Training
 
-416M parameter transformer trained on FineWeb-Edu 10B tokens. The model was trained on 8xA100 gpus and after one pass over 10B data,
-it is starting to show some aspects of learned language. It is not trained enough, or presumably big enough, to complete any useful tasks.
+416M parameter transformer trained on FineWeb-Edu 10B tokens. The model was trained on 8xA100 gpus and after one pass over 10B data, it is starting to show some aspects of learned language. 
+It is not trained enough to achieve anything useful just yet. Or presumably is not big enough in terms of model parameters/size to be of much utility.
 Saved checkpoint can be found: https://huggingface.co/dhlak/416m-gpt
 
-The checkpoint is close to chinchilla optimal (currently at ~24x), leaving some room for more training to see if any usefulness can be obtained. This model size was chosen because I've had a lot of utility with xlm-roberta, a 560m parameter encoder only model. This was to see how the decoder-only aspect could compare. While this idea fell short due to compute budget, there was a lot of valuable learning in setting up the transformer -> data collection/processing -> training loop -> distributed data parallel -> memory optimizations etc.
+The checkpoint is close to chinchilla optimal (currently at ~24x), leaving some room for more training to see if any usefulness can be obtained. This model size was chosen because I've had a lot of utility with xlm-roberta, a 560m parameter encoder only model. This was to see how the decoder-only aspect could compare. There was a lot of valuable learning in setting up the transformer -> data collection/processing -> training loop -> distributed data parallel -> memory optimizations etc.
 
 ## Setup
 
