@@ -1,4 +1,4 @@
-# LLM Training
+# Language Model Training
 
 416M parameter transformer trained on FineWeb-Edu 10B tokens. The model was trained on 8xA100 gpus and after one pass over 10B data,
 it is starting to show some aspects of learned language. It is not trained enough, or presumably big enough, to complete any useful tasks.
