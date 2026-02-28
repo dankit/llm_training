@@ -1,6 +1,6 @@
 # Language Model Training
 
-416M parameter transformer trained on FineWeb-Edu 10B tokens. The model was trained on 8xA100 gpus and after one pass over 10B data, it is starting to show some aspects of learned language. 
+416M parameter transformer (451M before weight-tying embeddings) trained on FineWeb-Edu 10B tokens. The model was trained on 8xA100 gpus and after one pass over 10B data, it is starting to show some aspects of learned language. 
 It is not trained enough to achieve anything useful just yet. Or presumably is not big enough in terms of model parameters/size to be of much utility.
 Saved checkpoint can be found: https://huggingface.co/dhlak/416m-gpt
 
