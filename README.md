@@ -1,10 +1,23 @@
 # Language Model Training
 
-416M parameter transformer (451M before weight-tying embeddings) trained on FineWeb-Edu 10B tokens. The model was trained on 8xA100 gpus and after one pass over 10B data, it is starting to show some aspects of learned language. 
-It is not trained enough to achieve anything useful just yet. Or presumably is not big enough in terms of model parameters/size to be of much utility.
+451M parameter transformer (416M after weight-tying embeddings) trained on FineWeb-Edu 10B tokens. The model was trained on 8xA100 gpus and after one pass over 10B data, it is starting to show some aspects of learned language. 
+This model size was chosen because I've had a lot of utility with xlm-roberta, a 560m parameter encoder only model. This was to see how the decoder-only aspect could compare. There was a lot of valuable learning in setting up the transformer -> data collection/processing -> training loop -> distributed data parallel -> memory optimizations etc.
+
 Saved checkpoint can be found: https://huggingface.co/dhlak/416m-gpt
 
-The checkpoint is close to chinchilla optimal (currently at ~24x), leaving some room for more training to see if any usefulness can be obtained. This model size was chosen because I've had a lot of utility with xlm-roberta, a 560m parameter encoder only model. This was to see how the decoder-only aspect could compare. There was a lot of valuable learning in setting up the transformer -> data collection/processing -> training loop -> distributed data parallel -> memory optimizations etc.
+The checkpoint is close to chinchilla optimal (currently at ~24x), leaving lots more room for training a smaller language model.
+
+As inference costs dominate, it is common to see companies overtrain smaller models to pack in more knowledge.
+
+| Model | Total Params | Training Tokens | Tokens / Param |
+|---|---|---|---|
+| LFM2-350M | 350M | 10T | ~28,571 |
+| LFM2.5-350M | 350M | 28T | ~80,000 |
+| Llama 3 8B | 8B | 15T | ~1,875 |
+| Llama 3.1 405B | 405B | 15T | ~37 |
+| Kimi K2 / K2.5 | 1T | 15.5T | ~15.5 |
+| DeepSeek V3 | 671B | 14.8T | ~22 |
+| Qwen3 235B-A22B | 235B | 36T | ~153 |
 
 ## Setup
 
